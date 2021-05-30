@@ -22,12 +22,7 @@ public class commandMe implements CommandExecutor {
         if (args.length == 0) {
             return false;
         } else {
-            String action = String.join(" ", args);
-            String message = plugin.me_msg
-                    .replace("%", "%%")
-                    .replace("{player}", sender.getName())
-                    .replace("{action}", action);
-            Bukkit.broadcastMessage(message);
+            Bukkit.broadcastMessage(Message.format_me(plugin.me_msg, sender, args));
             return true;
         }
     }

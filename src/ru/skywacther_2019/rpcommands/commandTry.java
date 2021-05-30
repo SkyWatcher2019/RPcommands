@@ -24,21 +24,8 @@ public class commandTry implements CommandExecutor {
         if (args.length == 0) {
             return false;
         } else {
-            String result;
-            Random random = new Random();
-            if (random.nextBoolean()) {
-                result = "§a§oуспешно";
-            } else {
-                result = "§c§oне успешно";
-            }
-            String action = String.join(" ", args);
-            String message = plugin.try_msg
-                    .replace("%", "%%")
-                    .replace("{player}", sender.getName())
-                    .replace("{action}", action)
-                    .replace("{result}", result);
-            Bukkit.broadcastMessage(message);
-            return  true;
+            Bukkit.broadcastMessage(Message.format_try(plugin.try_msg, sender, args));
+            return true;
         }
     }
 }

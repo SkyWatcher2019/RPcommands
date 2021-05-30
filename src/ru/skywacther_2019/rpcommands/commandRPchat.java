@@ -16,19 +16,16 @@ public class commandRPchat implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
-        if(!sender.hasPermission("rpcmd.reload")) {
+        if (!sender.hasPermission("rpcmd.reload")) {
             sender.sendMessage(plugin.no_permission_msg);
             return true;
         }
         if (args.length != 1 || !args[0].equals("reload")) {
             return false;
-        }
-        else {
+        } else {
             try {
                 plugin.configuration.load(plugin.config_file);
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (InvalidConfigurationException e) {
+            } catch (IOException | InvalidConfigurationException e) {
                 e.printStackTrace();
             }
             plugin.me_msg = plugin.configuration.getString("me");

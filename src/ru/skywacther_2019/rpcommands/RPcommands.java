@@ -8,7 +8,7 @@ import java.io.File;
 
 public class RPcommands extends JavaPlugin {
     public File config_file = new File(getDataFolder() + File.separator + "config.yml");
-    public FileConfiguration configuration = YamlConfiguration.loadConfiguration(config_file);;
+    public FileConfiguration configuration = YamlConfiguration.loadConfiguration(config_file);
     public String me_msg, try_msg, no_permission_msg;
 
     @Override
