@@ -1,0 +1,14 @@
+main: ru.skywacther_2019.rpcommands.RPcommands
+version: 1.0
+name: RPcommands
+author: SkyWatcher_2019
+
+commands:
+  try:
+    description: "§eВыводит в чат указанное действие и результат (§aУспешно§e/§cНе успешно§e)."
+    usage: "§eИспользование: §b/try §a<действие>"
+  me:
+    description: "§eВыводит в чат указанное действие."
+    usage: "§eИспользование: §b/me §a<действие>"
+  rpcmd:
+    usage: "§b/rpcmd reload"
