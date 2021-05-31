@@ -24,7 +24,7 @@ public class RPcommands extends JavaPlugin {
 
         getCommand("me").setExecutor(new commandMe(this));
         getCommand("try").setExecutor(new commandTry(this));
-        getCommand("rpcmd").setExecutor(new commandRPchat(this));
+        getCommand("rpcmd").setExecutor(new commandRPcmd(this));
 
         getLogger().info("Активирован");
     }

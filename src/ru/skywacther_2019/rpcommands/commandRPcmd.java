@@ -7,10 +7,10 @@ import org.bukkit.configuration.InvalidConfigurationException;
 
 import java.io.IOException;
 
-public class commandRPchat implements CommandExecutor {
+public class commandRPcmd implements CommandExecutor {
     private final RPcommands plugin;
 
-    public commandRPchat(RPcommands plugin) {
+    public commandRPcmd(RPcommands plugin) {
         this.plugin = plugin;
     }
 
