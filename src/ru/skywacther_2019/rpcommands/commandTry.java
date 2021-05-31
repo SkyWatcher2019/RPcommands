@@ -5,8 +5,6 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-import java.util.Random;
-
 public class commandTry implements CommandExecutor {
     private final RPcommands plugin;
 
